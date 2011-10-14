@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %params = (
-  NAME      => 'Games::Sokoban::SDL',
+  NAME      => 'Games::Sokoban::Player',
   AUTHOR    => 'Kenichi Ishigaki <ishigaki@cpan.org>',
   VERSION_FROM  => 'lib/Games/Sokoban/Player.pm',
   ABSTRACT_FROM => 'lib/Games/Sokoban/Player.pm',
@@ -15,6 +15,7 @@ my %params = (
     'Test::More'      => '0.47',
     'Test::UseAllModules' => '0.10',
   },
+  EXE_FILES => [qw/sokoban/],
   META_MERGE => {
     resources => {
       repository => '',
