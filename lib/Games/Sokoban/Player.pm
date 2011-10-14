@@ -10,7 +10,6 @@ use SDLx::App;
 use SDLx::Sprite;
 use SDLx::Layer;
 use SDLx::LayerManager;
-use SDL::Image;
 use SDL::GFX::Rotozoom;
 
 our $VERSION = '0.01';
@@ -92,7 +91,7 @@ sub prepare {
     exit_on_quit => 1,
   );
 
-  my ($w, $h) = $self->_prepare;
+  $self->_prepare;
   $app->update;
 
   my %methods = map {$_ => "go_$_"} qw/left right up down/;
@@ -133,7 +132,7 @@ sub prepare {
           $self->clear;
           if ($self->{levels}[++$self->{current}]) {
             $self->_prepare;
-            $self->redraw([$self->{size}]);
+            $self->redraw;
           } else {
             print "ALL CLEAR!";
             $app->stop;
@@ -144,7 +143,7 @@ sub prepare {
     }
   });
 
-  $self->redraw($w, $h);
+  $self->redraw;
 
   $app;
 }
