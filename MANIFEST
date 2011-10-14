@@ -1,0 +1,16 @@
+Changes
+images/box.gif
+images/box2.gif
+images/clear.gif
+images/floor.gif
+images/goal.gif
+images/player.gif
+images/wall.gif
+lib/Games/Sokoban/Player.pm
+Makefile.PL
+MANIFEST			This list of files
+README
+sokoban
+t/00_load.t
+t/99_pod.t
+t/99_podcoverage.t
