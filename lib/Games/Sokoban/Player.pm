@@ -109,7 +109,7 @@ sub prepare {
       if ($key eq 'down')  { @replaced = $c->go_down(@_) }
       if ($key eq 'r') {
         $self->_prepare;
-        $self->redraw([$self->{size}]);
+        $self->redraw;
       }
 
       if (@replaced) {
